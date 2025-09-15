@@ -21,3 +21,19 @@ void displayArray(const string* a, int n) {
     }                                                    // also the ? : operator is used kinda like and if else but with booleans
                                                          // if its true it returns first then if it's false it returns the second   
 }
+
+
+int main() {
+    string* names = new string[N]{   // dynamic string array of size 5
+        "Janet", "Jeffe", "Jin", "Joe", "Junio"
+    };
+
+    cout << "Original array: ";
+    displayArray(names, N);
+
+    cout << "\nReversed array: ";
+    displayArray(reverseArray(names, N), N);
+
+    delete[] names;                 // free up some memory
+    return 0;
+}
