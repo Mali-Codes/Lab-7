@@ -15,4 +15,9 @@ string* reverseArray(string* a, int n) {
     return a;
 }
 
-
+void displayArray(const string* a, int n) {
+    for (const string* p = a; p != a + n; ++p) {         //start from beginning to end
+        cout << *p << (p + 1 == a + n ? '\n' : ' ');     // print value and space or newline
+    }                                                    // also the ? : operator is used kinda like and if else but with booleans
+                                                         // if its true it returns first then if it's false it returns the second   
+}
